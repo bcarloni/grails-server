@@ -2,5 +2,9 @@ package grails.server
 
 class ResponseController {
 
-    def index() { }
+    def getInfo() {
+        Map response = [:]
+        response = [message:"Funciona todo bien", action:"GET"]
+        return [status:200, response: response]
+    }
 }
